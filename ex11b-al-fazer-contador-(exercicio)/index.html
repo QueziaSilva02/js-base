@@ -58,19 +58,19 @@
 
        // 1ª Digitação (Resolva aqui o exercício)
 
-    // Seleciona o parágrafo e o botão
-    const quoteText = document.getElementById("quote");
-    const button = document.getElementById("newQuoteButton");
+   // Selecionamos o botão e o parágrafo
+    const botao = document.getElementById('newQuoteButton');
+    const texto = document.getElementById('quote');
 
-    // Função para gerar uma citação aleatória
-    function gerarCitacao() {
-      const indiceAleatorio = Math.floor(Math.random() * quotes.length);
-      quoteText.textContent = quotes[indiceAleatorio];
-    }
-
-    // Evento de clique no botão
-    button.addEventListener("click", gerarCitacao);
-
+    // Criamos a função que troca o texto
+    botao.onclick = function() {
+      // Sorteia um índice do array
+      const sorteio = Math.floor(Math.random() * quotes.length);
+      
+      // Exibe a citação no parágrafo
+      texto.innerText = quotes[sorteio];
+    };
+    
   </script>
 </body>
 </html>
